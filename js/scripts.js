@@ -1,4 +1,7 @@
 var numberString = "";
+var firstInputString = "";
+var result;
+var operation;
 
 $(document).ready(function() {
 	$("#_0").click(function() {
@@ -40,37 +43,74 @@ $(document).ready(function() {
 		numberString += "9";
 		$("#result").html(numberString);
 	});
+	$("#decimal").click(function() {
+		numberString += ".";
+		$("#result").html(numberString);
+	});
 
 	$("#equal").click(function() {
-		$("#result").html(numberString);
+		result = operation(parseFloat(firstInputString), parseFloat(numberString)).toString();
+		$("#result").html(result);
+		//numberString = firstInputString;
+		firstInputString = result;
+
+
 	});
 
 	$("#AC").click(function() {
 		numberString = "";
+		result = "";
+		operation = undefined;
 
 		$("#result").html("0");
 	});
 
+	$("#percent").click(function() {
+		pushNumber();
+		operation = percent;
+	});
+	$("#divide").click(function() {
+		pushNumber();
+		operation = divide;
+	});
+	$("#multiply").click(function() {
+		pushNumber();
+		operation = multiply;
+	});
+	$("#minus").click(function() {
+		pushNumber();
+		operation = subtract;
+	});
+	$("#add").click(function() {
+		pushNumber();
+		operation = add;
+	});
+
+
+
+
 
 });
 
-
+var pushNumber = function() {
+	firstInputString = numberString;
+	numberString = "";
+};
 var add = function(n1,n2) {
 	return n1 + n2;
-}
-
+};
 var subtract = function(n1,n2) {
 	return n1 - n2;
-}
-
+};
 var multiply = function(number1, number2) {
 	return number1 * number2;
-}
-
+};
 var divide = function(n1,n2) {
 	return n1 / n2;
-}
-
+};
+var percent = function(n1,n2) {
+	return (n1/n2)*100;
+};
 var remainder = function(n1,n2) {
 	return n1 % n2;
-}
+};
