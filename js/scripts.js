@@ -1,6 +1,6 @@
 var numberString = "";
-var firstInputString = "";
-var result;
+var operand = "";
+var result = undefined;
 var operation;
 
 $(document).ready(function() {
@@ -49,17 +49,17 @@ $(document).ready(function() {
 	});
 
 	$("#equal").click(function() {
-		result = operation(parseFloat(firstInputString), parseFloat(numberString)).toString();
+		operand = numberString;
+		result = operation(parseFloat(result), parseFloat(operand)).toString();
 		$("#result").html(result);
-		//numberString = firstInputString;
-		firstInputString = result;
 
 
 	});
 
 	$("#AC").click(function() {
 		numberString = "";
-		result = "";
+		operand = "";
+		result = undefined;
 		operation = undefined;
 
 		$("#result").html("0");
@@ -93,7 +93,9 @@ $(document).ready(function() {
 });
 
 var pushNumber = function() {
-	firstInputString = numberString;
+	if (result === undefined) {
+		result = numberString;
+	}
 	numberString = "";
 };
 var add = function(n1,n2) {
