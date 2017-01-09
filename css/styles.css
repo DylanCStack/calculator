@@ -1,0 +1,16 @@
+#equal {
+  background-color: skyblue;
+}
+
+.function {
+  background-color: gray;
+}
+
+.number {
+background-color: lightgray;
+}
+
+.row > * {
+  padding: 2px;
+  border: 1px solid white;
+}

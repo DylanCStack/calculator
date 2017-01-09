@@ -2,9 +2,92 @@
 <html>
   <head>
     <title>Calculator</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
-    <h1>Calculator</h1>
-    <script src="js/scripts.js"></script>
+    <div class ="container">
+      <div class = "jumbotron">
+        <h1>Calculator</h1>
+        <p>A simple calculator in Javascript and JQuery.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p id="result"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 function" id="paren-open">
+          (
+        </div>
+        <div class="col-md-3 function" id="paren-close">
+          )
+        </div>
+        <div class="col-md-3 function" id="percent">
+          %
+        </div>
+        <div class="col-md-3 function" id="AC">
+          AC
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 number" id="_7">
+          7
+        </div>
+        <div class="col-md-3 number" id="_8">
+          8
+        </div>
+        <div class="col-md-3 number" id="_9">
+          9
+        </div>
+        <div class="col-md-3 function" id="divide">
+          /
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 number" id="_4">
+          4
+        </div>
+        <div class="col-md-3 number" id="_5">
+          5
+        </div>
+        <div class="col-md-3 number" id="_6">
+          6
+        </div>
+        <div class="col-md-3 function" id="multiply">
+          x
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 number" id="_1">
+          1
+        </div>
+        <div class="col-md-3 number" id="_2">
+          2
+        </div>
+        <div class="col-md-3 number" id="_3">
+          3
+        </div>
+        <div class="col-md-3 function" id="minus">
+          -
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 number" id="_0">
+          0
+        </div>
+        <div class="col-md-3 number" id="decimal">
+          .
+        </div>
+        <div class="col-md-3" id="equal">
+          =
+        </div>
+        <div class="col-md-3 function" id="add">
+          +
+        </div>
+      </div>
+
   </body>
 </html>
